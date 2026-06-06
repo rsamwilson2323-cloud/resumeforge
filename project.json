@@ -1,0 +1,21 @@
+{
+  "overview": "An ATS-friendly resume builder where users log in, fill out their resume with a live side-by-side preview, and export a clean PDF optimized for job applications.",
+  "features": [
+    "Login with Internet Identity to save and resume editing across sessions",
+    "Live side-by-side preview — see your resume update as you type",
+    "Structured sections: contact info, summary, work experience, education, and skills",
+    "Skills managed as add/remove tag badges",
+    "One-click PDF export with clean black-and-white ATS-optimized layout",
+    "Default ATS template applied immediately — no setup required"
+  ],
+  "category": "productivity",
+  "tags": [
+    "resume",
+    "career",
+    "ats",
+    "job-search",
+    "pdf-export",
+    "productivity"
+  ],
+  "last_updated": "2026-06-06T10:26:41.467Z"
+}

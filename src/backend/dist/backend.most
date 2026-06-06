@@ -1,0 +1,86 @@
+// Version: 4.0.0
+type ContactInfo__508415498 =
+  {email : Text; linkedin : Text; location : Text; name : Text; phone : Text};
+type ContactInfo__786043265 =
+  {email : Text; linkedin : Text; location : Text; name : Text; phone : Text};
+type Data__80296667<K, V> =
+  {var count : Nat__1040412405; kvs : [var ?(K, V)]};
+type Education__227365414 =
+  {
+    degree : Text;
+    endDate : Text;
+    field : Text;
+    institution : Text;
+    startDate : Text
+  };
+type Education__514518912 =
+  {
+    degree : Text;
+    endDate : Text;
+    field : Text;
+    institution : Text;
+    startDate : Text
+  };
+type Internal__41346355<K, V> =
+  {children : [var ?Node__1000929467<K, V>]; data : Data__80296667<K, V>};
+type Leaf__712614010<K, V> = {data : Data__80296667<K, V>};
+type Map__222667396<K, V> = Map__912772452<K, V>;
+type Map__709709801<K, V> =
+  {var root : Node__1000929467<K, V>; var size : Nat__1040412405};
+type Map__912772452<K, V> = Map__709709801<K, V>;
+type Nat__1040412405 = Nat__920180692;
+type Nat__920180692 = Nat;
+type NewActor__719211346 =
+  {resumes : Map__222667396<UserId__1025404502, Resume__625605342>};
+type Node__1000929467<K, V> =
+  {#internal : Internal__41346355<K, V>; #leaf : Leaf__712614010<K, V>};
+type OldActor__430996676 = {};
+type Resume__444704314 =
+  {
+    contact : ContactInfo__508415498;
+    education : [Education__227365414];
+    skills : [Text];
+    summary : Text;
+    updatedAt : Timestamp__301639476;
+    workExperience : [WorkExperience__883027200]
+  };
+type Resume__625605342 =
+  {
+    contact : ContactInfo__786043265;
+    education : [Education__514518912];
+    skills : [Text];
+    summary : Text;
+    updatedAt : Int;
+    workExperience : [WorkExperience__1062091398]
+  };
+type Timestamp__301639476 = Int;
+type UserId__1025404502 = Principal;
+type UserId__158757552 = Principal;
+type WorkExperience__1062091398 =
+  {
+    company : Text;
+    description : Text;
+    endDate : Text;
+    location : Text;
+    startDate : Text;
+    title : Text
+  };
+type WorkExperience__883027200 =
+  {
+    company : Text;
+    description : Text;
+    endDate : Text;
+    location : Text;
+    startDate : Text;
+    title : Text
+  };
+{
+  "20260606_000000_Init" : OldActor__430996676 -> NewActor__719211346
+}
+actor  {
+  stable resumes :
+    {
+      var root : Node__1000929467<UserId__158757552, Resume__444704314>;
+      var size : Nat__1040412405
+    }
+};

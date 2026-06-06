@@ -1,0 +1,39 @@
+type WorkExperience = 
+ record {
+   company: text;
+   description: text;
+   endDate: text;
+   location: text;
+   startDate: text;
+   title: text;
+ };
+type Timestamp = int;
+type Resume = 
+ record {
+   contact: ContactInfo;
+   education: vec Education;
+   skills: vec text;
+   summary: text;
+   updatedAt: Timestamp;
+   workExperience: vec WorkExperience;
+ };
+type Education = 
+ record {
+   degree: text;
+   endDate: text;
+   field: text;
+   institution: text;
+   startDate: text;
+ };
+type ContactInfo = 
+ record {
+   email: text;
+   linkedin: text;
+   location: text;
+   name: text;
+   phone: text;
+ };
+service : {
+  loadResume: () -> (opt Resume) query;
+  saveResume: (resume: Resume) -> ();
+}
